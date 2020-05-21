@@ -21,7 +21,59 @@ if (isset($_GET["id"]) && isset($_GET["token"]) && isset($_GET["body"]) && isset
                 "body" => $body
             )
         );
-    echo 'Message Send...';
+    $a = 'Message Send...';
 } else {
-    echo "There is no request yet! Copy this link(webhook) and make an HTTP Get Request from your device.";
+    $a = "There is no request yet! Copy this link(webhook) and make an HTTP Get Request from your device.";
 }
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        p {
+            color: white;
+            font-size: 10px;
+        }
+
+        .center {
+            display: block;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+
+</html>
+
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        h1 {
+            color: white;
+            font-size: 100px;
+            text-align: center;
+        }
+        h2 {
+            color: red;
+            font-size: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Radio Monitoring WebService</h1>
+    <h1> WebHook</h1>
+    <h2> <?=$a?></h2>
+
+</body>
+
+</html>
